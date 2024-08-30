@@ -3,9 +3,9 @@
   <a href="https://github.com/uwo-fast">
     <img src="https://github.com/uwo-fast/.github/blob/main/branding/FAST%20Logo%20Orange%20on%20White%20Transparent.png" height="100">
   </a>
-  <h2><a href="https://github.com/uwo-fast/Slice_BUCK"> Slice BUCK </a></h2>
+  <h2><a href="https://github.com/uwo-fast/Slice_BUCK"> BUCK Slice </a></h2>
   <!-- Labels: -->
-  <!-- Labels: -->
+  <!-- First row: -->
   <a href="https://github.com/uwo-fast/.github/blob/main/collaborating.md">
     <img src="https://img.shields.io/badge/Collaborators-Welcome-lightgreen" alt="Collaborators">
   </a>
@@ -16,22 +16,20 @@
     <img src="https://img.shields.io/badge/OSHWA-Incomplete-cc3300?style=flat-square" height="20" alt="OSHWA">
     <!-- img src="https://img.shields.io/badge/OSHWA-Certified-darkgreen?style=flat-square" height="20" alt="OSHWA" -->       <!-- img src="https://img.shields.io/badge/OSHWA-Pending-darkorange?style=flat-square" height="20" alt="OSHWA" -->
   </a>
-  <a href="https://github.com/uwo-fast/Loaf_ESPT/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/uwo-fast/Loaf_ESPT" alt="License">
+  <a href="https://github.com/uwo-fast/Slice_BUCK/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/uwo-fast/Slice_BUCK" alt="License">
   </a>
-  <a href="https://github.com/uwo-fast/Loaf_ESPT">
-    <img src="https://img.shields.io/github/repo-size/uwo-fast/Loaf_ESPT" alt="Repo Size">
+  <a href="https://github.com/uwo-fast/Slice_BUCK">
+    <img src="https://img.shields.io/github/repo-size/uwo-fast/Slice_BUCK" alt="Repo Size">
   </a>
+
   <!-- Short description: -->
-  <h3>Buck Converter Signal Generator Slice for BREAD.</h3>
+  <h3> Buck Converter Signal Generator Slice for BREAD </h3>
 </div>
 
-
 ## Introduction
-[Provide a brief introduction to the project, including the motivation and goals. Explain the significance and context of the research.]
 
-## Project Overview
-[Describe the project in more detail. This section can be split into subsections if necessary.]
+This slice contains a single buck converter with input and output terminals.
 
 ## Installation
 [Provide instructions for installing any necessary software or hardware components.]
