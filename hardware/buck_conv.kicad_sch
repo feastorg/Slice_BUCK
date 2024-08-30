@@ -1239,12 +1239,6 @@
 		)
 	)
 	(junction
-		(at 181.61 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19001bf0-204c-497f-96f6-a52c139a1f99")
-	)
-	(junction
 		(at 151.13 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1262,6 +1256,12 @@
 		(color 0 0 0 0)
 		(uuid "652929b5-2a22-4933-94bb-65d0d957116f")
 	)
+	(junction
+		(at 181.61 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9709a5c2-e749-484e-b98b-ae56627338aa")
+	)
 	(wire
 		(pts
 			(xy 133.35 71.12) (xy 133.35 73.66)
@@ -1274,7 +1274,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 78.74) (xy 186.69 82.55)
+			(xy 186.69 83.82) (xy 186.69 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1284,7 +1284,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 95.25) (xy 142.24 74.93)
+			(xy 142.24 90.17) (xy 142.24 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1304,7 +1304,17 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 78.74) (xy 186.69 78.74)
+			(xy 181.61 74.93) (xy 181.61 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c070842-7fb5-4df9-8683-39a379d135e5")
+	)
+	(wire
+		(pts
+			(xy 185.42 83.82) (xy 186.69 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1324,7 +1334,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 80.01) (xy 170.18 82.55)
+			(xy 170.18 80.01) (xy 170.18 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1351,6 +1361,16 @@
 			(type default)
 		)
 		(uuid "46fd6903-2b72-430d-a54b-2fa0f402df24")
+	)
+	(wire
+		(pts
+			(xy 181.61 88.9) (xy 181.61 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48ef74e8-0546-4823-8314-7e2d71182485")
 	)
 	(wire
 		(pts
@@ -1404,7 +1424,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 71.12) (xy 204.47 76.2)
+			(xy 204.47 71.12) (xy 204.47 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1414,7 +1434,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 82.55) (xy 151.13 80.01)
+			(xy 151.13 88.9) (xy 151.13 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1424,7 +1444,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 74.93) (xy 195.58 74.93)
+			(xy 181.61 77.47) (xy 194.31 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1434,7 +1454,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 74.93) (xy 195.58 95.25)
+			(xy 194.31 77.47) (xy 194.31 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1452,9 +1472,19 @@
 		)
 		(uuid "e04141e2-6064-4b7f-bdd2-5acc832ca117")
 	)
+	(wire
+		(pts
+			(xy 181.61 80.01) (xy 181.61 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e75d5302-90bd-4f24-87c4-fabc3353b3ac")
+	)
 	(hierarchical_label "FB"
 		(shape input)
-		(at 195.58 95.25 270)
+		(at 194.31 90.17 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1466,7 +1496,7 @@
 	)
 	(hierarchical_label "SW"
 		(shape input)
-		(at 142.24 95.25 270)
+		(at 142.24 90.17 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1789,7 +1819,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 170.18 82.55 0)
+		(at 170.18 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1797,7 +1827,7 @@
 		(dnp no)
 		(uuid "62a50c38-5fd9-49f5-8ffa-84341ef69fec")
 		(property "Reference" "#PWR016"
-			(at 170.18 88.9 0)
+			(at 170.18 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1806,7 +1836,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 170.307 86.9442 0)
+			(at 170.307 93.2942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1814,7 +1844,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 170.18 82.55 0)
+			(at 170.18 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1823,7 +1853,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 82.55 0)
+			(at 170.18 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1832,7 +1862,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 170.18 82.55 0)
+			(at 170.18 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1854,7 +1884,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 204.47 76.2 0)
+		(at 204.47 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1862,7 +1892,7 @@
 		(dnp no)
 		(uuid "700746c5-6a2f-462f-96fa-abf6f273dff9")
 		(property "Reference" "#PWR019"
-			(at 204.47 82.55 0)
+			(at 204.47 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1871,7 +1901,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 204.597 80.5942 0)
+			(at 204.597 93.2942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1879,7 +1909,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 76.2 0)
+			(at 204.47 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1888,7 +1918,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 76.2 0)
+			(at 204.47 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1897,7 +1927,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 76.2 0)
+			(at 204.47 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1919,7 +1949,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 181.61 82.55 0)
+		(at 181.61 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1927,7 +1957,7 @@
 		(dnp no)
 		(uuid "83cded4b-d25d-4422-91b5-72e7ab2142cf")
 		(property "Reference" "#PWR017"
-			(at 181.61 88.9 0)
+			(at 181.61 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1936,7 +1966,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.737 86.9442 0)
+			(at 181.737 93.2942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1944,7 +1974,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 82.55 0)
+			(at 181.61 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1953,7 +1983,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 82.55 0)
+			(at 181.61 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1962,7 +1992,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 82.55 0)
+			(at 181.61 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2118,7 +2148,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:R_POT_US-Device")
-		(at 181.61 78.74 0)
+		(at 181.61 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2126,7 +2156,7 @@
 		(dnp no)
 		(uuid "a8bf646b-4426-4fb8-b42b-0739b55d568e")
 		(property "Reference" "RV1"
-			(at 179.9082 77.5716 0)
+			(at 179.9082 82.6516 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2135,7 +2165,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 179.9082 79.883 0)
+			(at 179.9082 84.963 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2144,7 +2174,7 @@
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical"
-			(at 181.61 78.74 0)
+			(at 181.61 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2153,7 +2183,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.61 78.74 0)
+			(at 181.61 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2162,7 +2192,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 78.74 0)
+			(at 181.61 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2190,7 +2220,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 151.13 82.55 0)
+		(at 151.13 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2198,7 +2228,7 @@
 		(dnp no)
 		(uuid "c71b33a9-3b2f-4a8a-813a-8572d0b314be")
 		(property "Reference" "#PWR015"
-			(at 151.13 88.9 0)
+			(at 151.13 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2207,7 +2237,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 151.257 86.9442 0)
+			(at 151.257 93.2942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2215,7 +2245,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 82.55 0)
+			(at 151.13 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2224,7 +2254,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 82.55 0)
+			(at 151.13 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2233,7 +2263,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 151.13 82.55 0)
+			(at 151.13 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2322,7 +2352,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 186.69 82.55 0)
+		(at 186.69 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2330,7 +2360,7 @@
 		(dnp no)
 		(uuid "d40bd77d-eb06-4ae8-8690-2eea4c979a52")
 		(property "Reference" "#PWR018"
-			(at 186.69 88.9 0)
+			(at 186.69 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2339,7 +2369,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 186.817 86.9442 0)
+			(at 186.817 93.2942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2347,7 +2377,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2356,7 +2386,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2365,7 +2395,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)

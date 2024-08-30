@@ -5,42 +5,22 @@
   </a>
   <h2><a href="https://github.com/uwo-fast/Slice_BUCK"> Slice BUCK </a></h2>
   <!-- Labels: -->
-  <!-- First row: -->
+  <!-- Labels: -->
   <a href="https://github.com/uwo-fast/.github/blob/main/collaborating.md">
     <img src="https://img.shields.io/badge/Collaborators-Welcome-lightgreen" alt="Collaborators">
   </a>
   <a href="https://github.com/uwo-fast/.github/blob/main/contributing.md">
     <img src="https://img.shields.io/badge/Contributions-Welcome-lightgreen" alt="Contributions">
   </a>
-  <a href="https://www.appropedia.org/Category:FAST_literature_reviews">
-    <img src="https://img.shields.io/badge/Appropedia-Lit_Review-white" alt="Appropedia">
-  </a>
   <a href="https://certification.oshwa.org/">
     <img src="https://img.shields.io/badge/OSHWA-Incomplete-cc3300?style=flat-square" height="20" alt="OSHWA">
     <!-- img src="https://img.shields.io/badge/OSHWA-Certified-darkgreen?style=flat-square" height="20" alt="OSHWA" -->       <!-- img src="https://img.shields.io/badge/OSHWA-Pending-darkorange?style=flat-square" height="20" alt="OSHWA" -->
   </a>
-  <a href="https://osf.io/">
-    <img src="https://img.shields.io/badge/OSF-Project-lightblue" alt="OSF">
+  <a href="https://github.com/uwo-fast/Loaf_ESPT/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/uwo-fast/Loaf_ESPT" alt="License">
   </a>
-  <a href="https://doi.org">
-    <img src="https://img.shields.io/badge/Paper-Unsubmitted-ff0066" alt="Paper">
-  </a>
-  <!-- Second row: -->
-  <br>
-  <a href="https://github.com/uwo-fast/Slice_BUCK/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/uwo-fast/Slice_BUCK" alt="License">
-  </a>
-  <a href="https://github.com/uwo-fast/Slice_BUCK">
-    <img src="https://img.shields.io/github/repo-size/uwo-fast/Slice_BUCK" alt="Repo Size">
-  </a>
-  <a href="https://github.com/uwo-fast/Slice_BUCK/issues">
-    <img src="https://img.shields.io/github/issues/uwo-fast/Slice_BUCK" alt="Issues">
-  </a>
-  <a href="https://github.com/uwo-fast/Slice_BUCK/network/members">
-    <img src="https://img.shields.io/github/forks/uwo-fast/Slice_BUCK?style=social" alt="Forks">
-  </a>
-  <a href="https://github.com/uwo-fast/Slice_BUCK/stargazers">
-    <img src="https://img.shields.io/github/stars/uwo-fast/Slice_BUCK?style=social" alt="Stars">
+  <a href="https://github.com/uwo-fast/Loaf_ESPT">
+    <img src="https://img.shields.io/github/repo-size/uwo-fast/Loaf_ESPT" alt="Repo Size">
   </a>
   <!-- Short description: -->
   <h3>Buck Converter Signal Generator Slice for BREAD.</h3>
