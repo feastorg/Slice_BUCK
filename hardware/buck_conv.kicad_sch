@@ -5,233 +5,6 @@
 	(uuid "c3105078-b749-494d-878e-45527a35504c")
 	(paper "A4")
 	(lib_symbols
-		(symbol "BREAD_Slice-rescue:GND-power"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "power_GND"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "GND-power_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND-power_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "BREAD_Slice-rescue:INDUCTOR-pspice"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "pspice_INDUCTOR"
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "INDUCTOR-pspice_0_1"
-				(arc
-					(start -2.54 0)
-					(mid -3.81 1.27)
-					(end -5.08 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid -1.27 1.27)
-					(end -2.54 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 0)
-					(mid 1.27 1.27)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 5.08 0)
-					(mid 3.81 1.27)
-					(end 2.54 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "INDUCTOR-pspice_1_1"
-				(pin input line
-					(at -6.35 0 0)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 6.35 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "BREAD_Slice-rescue:R_POT_US-Device"
 			(pin_names
 				(offset 1.016) hide)
@@ -433,341 +206,6 @@
 				)
 			)
 		)
-		(symbol "BREAD_Slice-rescue:TIP120-OCI_UPL_4_Semiconductors"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 7.62 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Value" "OCI_UPL_4_Semiconductors_TIP120"
-				(at 15.24 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Footprint" "OCI_UPL_FOOTPRINTS:TO-220_Neutral123_Vertical_LargePads"
-				(at 10.16 2.54 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/short/q75wn4"
-				(at 11.43 3.81 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "TIP120"
-				(at 10.16 -2.54 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "UPL #" "4.023"
-				(at 10.16 -3.81 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TIP120-OCI_UPL_4_Semiconductors_0_1"
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TIP120-OCI_UPL_4_Semiconductors_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 5.715)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 3.81 1.27 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "OCI_UPL_10_Connectors_Term_2"
-				(at 6.35 3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "OCI_UPL_FOOTPRINTS:TerminalBlock_Pheonix_MKDS1.5-2pol"
-				(at 21.59 5.08 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/short/q7wbhd"
-				(at 21.59 1.27 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1935161"
-				(at 21.59 2.54 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(property "UPL #" "10.003"
-				(at 22.86 3.81 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Term_2-OCI_UPL_10_Connectors_0_1"
-				(rectangle
-					(start -1.524 5.588)
-					(end 1.524 -1.778)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -0.762) (xy 1.016 0.762)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 3.048) (xy 1.016 4.572)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 3.81)
-					(radius 1.27)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Term_2-OCI_UPL_10_Connectors_1_1"
-				(pin input line
-					(at -6.35 3.81 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -6.35 0 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -904,23 +342,23 @@
 				)
 			)
 		)
-		(symbol "Device:D"
+		(symbol "Device:L_Ferrite"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
+			(property "Reference" "L"
+				(at -1.27 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
+			(property "Value" "L_Ferrite"
+				(at 2.794 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -945,7 +383,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Diode"
+			(property "Description" "Inductor with ferrite core"
 				(at 0 0 0)
 				(effects
 					(font
@@ -954,7 +392,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "D"
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
 				(at 0 0 0)
 				(effects
 					(font
@@ -963,7 +401,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=K 2=A"
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -972,31 +410,25 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
+			(symbol "L_Ferrite_0_1"
+				(arc
+					(start 0 -2.54)
+					(mid 0.6323 -1.905)
+					(end 0 -1.27)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1005,7 +437,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.016 -2.794) (xy 1.016 -2.286)
 					)
 					(stroke
 						(width 0)
@@ -1017,10 +449,154 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.016 -1.778) (xy 1.016 -1.27)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -0.762) (xy 1.016 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0.254) (xy 1.016 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.27) (xy 1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 2.286) (xy 1.016 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -2.286) (xy 1.524 -2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.27) (xy 1.524 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.778) (xy 1.524 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.794) (xy 1.524 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 0.635)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 1.905)
+					(end 0 2.54)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1028,11 +604,11 @@
 					)
 				)
 			)
-			(symbol "D_1_1"
+			(symbol "L_Ferrite_1_1"
 				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1048,9 +624,9 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1237,44 +813,664 @@
 				)
 			)
 		)
+		(symbol "Diode:1N5822"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N5822"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88526/1n5820.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "40V 3A Schottky Barrier Rectifier Diode, DO-201AD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?201AD*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N5822_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N5822_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Mechanical:Heatsink_Pad"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim yes)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "HS"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Heatsink_Pad"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.3048 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0.3048 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Heatsink with electrical connection, 1 pin"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "thermal heat temperature"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Heatsink_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Heatsink_Pad_0_1"
+				(polyline
+					(pts
+						(xy -0.3302 0) (xy -0.9652 0) (xy -0.9652 2.54) (xy -1.6002 2.54) (xy -1.6002 0) (xy -2.2352 0)
+						(xy -2.2352 2.54) (xy -2.8702 2.54) (xy -2.8702 -1.27) (xy -0.9652 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3302 0) (xy -0.3302 2.54) (xy 0.3048 2.54) (xy 0.3048 0) (xy 0.9398 0) (xy 0.9398 2.54)
+						(xy 1.5748 2.54) (xy 1.5748 0) (xy 2.2098 0) (xy 2.2098 2.54) (xy 2.8448 2.54) (xy 2.8448 -1.27)
+						(xy -0.9652 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Heatsink_Pad_1_1"
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_FET:IRLZ44N"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IRLZ44N"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel HEXFET MOSFET Logic-Level"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?220*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "IRLZ44N_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "IRLZ44N_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
-		(at 151.13 67.31)
+		(at 163.83 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "08bdd506-77a8-4ade-8e91-6e40d6381438")
+	)
+	(junction
+		(at 163.83 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e053a5a-869d-4386-824a-0152004cd441")
 	)
 	(junction
-		(at 170.18 67.31)
+		(at 130.81 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "43d18529-53a5-49b6-bc77-9ac2fbd83e88")
+		(uuid "3ec49ec7-1de3-4307-a0eb-03d0d9d1d917")
 	)
 	(junction
-		(at 181.61 67.31)
+		(at 191.77 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "652929b5-2a22-4933-94bb-65d0d957116f")
+		(uuid "3fbb360b-97a5-4db4-9796-76fd69e28969")
 	)
 	(junction
-		(at 181.61 77.47)
+		(at 104.14 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5937c6fd-faac-4308-bf71-5ef866eec0a9")
+	)
+	(junction
+		(at 104.14 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68a39560-7601-4fe5-a4b0-8294ce84414e")
+	)
+	(junction
+		(at 191.77 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f2924f3-69b9-412d-8984-8eb32fab0ef9")
+	)
+	(junction
+		(at 222.25 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9709a5c2-e749-484e-b98b-ae56627338aa")
 	)
+	(junction
+		(at 222.25 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c1835710-7eb7-452b-8ba5-2c1677780b2a")
+	)
+	(junction
+		(at 130.81 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edc4dca2-8fb6-443f-89f6-01e0043ceda9")
+	)
+	(junction
+		(at 222.25 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f20ccb98-881f-471f-889f-0d8d82d1f517")
+	)
 	(wire
 		(pts
-			(xy 133.35 71.12) (xy 133.35 73.66)
+			(xy 87.63 120.65) (xy 104.14 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "040ec2ff-8dbb-4aef-93bb-97142f0486dc")
+		(uuid "00ff6077-24bc-43f4-8078-b943af152c85")
 	)
 	(wire
 		(pts
-			(xy 186.69 83.82) (xy 186.69 88.9)
+			(xy 191.77 120.65) (xy 163.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0549bcc0-29f7-4dc2-9e63-e55f5912e97e")
+	)
+	(wire
+		(pts
+			(xy 130.81 120.65) (xy 163.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0adb351d-387e-4442-9a0c-7c50990ae035")
+	)
+	(wire
+		(pts
+			(xy 236.22 105.41) (xy 236.22 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1284,27 +1480,17 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 90.17) (xy 142.24 74.93)
+			(xy 130.81 97.79) (xy 130.81 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "13daf7c2-13ad-4415-888e-9fc945a55a37")
+		(uuid "21627ff6-c452-4d43-ae8e-0ba00b12a285")
 	)
 	(wire
 		(pts
-			(xy 205.74 71.12) (xy 204.47 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1fc67713-ff71-4182-ad4f-ce4f1b5ea7ee")
-	)
-	(wire
-		(pts
-			(xy 181.61 74.93) (xy 181.61 77.47)
+			(xy 222.25 82.55) (xy 222.25 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1314,7 +1500,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 83.82) (xy 186.69 83.82)
+			(xy 226.06 105.41) (xy 236.22 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1324,7 +1510,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 72.39) (xy 170.18 67.31)
+			(xy 191.77 90.17) (xy 191.77 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1334,7 +1520,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 80.01) (xy 170.18 88.9)
+			(xy 191.77 97.79) (xy 191.77 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1344,17 +1530,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 67.31) (xy 151.13 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46536a9d-61c3-49c7-9234-07bd860d1464")
-	)
-	(wire
-		(pts
-			(xy 151.13 67.31) (xy 153.67 67.31)
+			(xy 163.83 63.5) (xy 173.99 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1364,7 +1540,17 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 88.9) (xy 181.61 87.63)
+			(xy 104.14 63.5) (xy 130.81 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "470a221d-d169-4755-ad84-b7c2d11c9579")
+	)
+	(wire
+		(pts
+			(xy 222.25 109.22) (xy 222.25 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1374,7 +1560,47 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 67.31) (xy 170.18 67.31)
+			(xy 88.9 40.64) (xy 146.05 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d6f6a5b-e131-499d-8a7f-dce609d69a04")
+	)
+	(wire
+		(pts
+			(xy 104.14 63.5) (xy 104.14 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "522caf36-e1af-4773-99c7-904800fcf06f")
+	)
+	(wire
+		(pts
+			(xy 104.14 120.65) (xy 130.81 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56e5c575-a978-40aa-b70d-0c11bf86c345")
+	)
+	(wire
+		(pts
+			(xy 163.83 96.52) (xy 163.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bbc08cd-1890-4b94-b3ce-fea7b7ef0b03")
+	)
+	(wire
+		(pts
+			(xy 181.61 63.5) (xy 191.77 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1384,7 +1610,47 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 72.39) (xy 151.13 67.31)
+			(xy 191.77 63.5) (xy 222.25 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "638a1cd7-245d-480c-ada2-de051e0b7090")
+	)
+	(wire
+		(pts
+			(xy 146.05 40.64) (xy 146.05 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64c629b1-29e0-484a-9627-aff14ea7a952")
+	)
+	(wire
+		(pts
+			(xy 222.25 120.65) (xy 236.22 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6747941e-0c3a-469a-8ef6-3d693839df1b")
+	)
+	(wire
+		(pts
+			(xy 130.81 63.5) (xy 140.97 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a53ab94-5fa2-4126-8553-a0f1af598e3c")
+	)
+	(wire
+		(pts
+			(xy 163.83 88.9) (xy 163.83 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1394,17 +1660,27 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 67.31) (xy 205.74 67.31)
+			(xy 130.81 63.5) (xy 130.81 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7e67900a-8764-49fd-ac66-97c4bb3e50dd")
+		(uuid "726213dc-90c1-4015-aa32-cab28fea48ff")
 	)
 	(wire
 		(pts
-			(xy 132.08 67.31) (xy 137.16 67.31)
+			(xy 104.14 97.79) (xy 104.14 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7978666b-9163-4944-aae3-948a68827aad")
+	)
+	(wire
+		(pts
+			(xy 87.63 63.5) (xy 104.14 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1414,37 +1690,37 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 71.12) (xy 133.35 71.12)
+			(xy 130.81 54.61) (xy 130.81 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9c59eb8b-e57c-41f3-abe7-1e3046190154")
+		(uuid "9e7fdb55-faee-4cd8-af4e-ca87c131b9fa")
 	)
 	(wire
 		(pts
-			(xy 204.47 71.12) (xy 204.47 88.9)
+			(xy 222.25 63.5) (xy 246.38 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5d616a6-770b-4783-914e-2c333801a937")
+		(uuid "c9a25c56-0993-44a0-b8a3-09309b50c959")
 	)
 	(wire
 		(pts
-			(xy 151.13 88.9) (xy 151.13 80.01)
+			(xy 151.13 63.5) (xy 163.83 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aa5484cd-72ac-4863-803b-7ba587cef90a")
+		(uuid "d869065a-ce7e-485d-a64d-d36d2760c521")
 	)
 	(wire
 		(pts
-			(xy 181.61 77.47) (xy 194.31 77.47)
+			(xy 222.25 92.71) (xy 246.38 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1454,27 +1730,27 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 77.47) (xy 194.31 90.17)
+			(xy 222.25 63.5) (xy 222.25 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9587ce0-8f4e-4476-8743-d9afd7205903")
+		(uuid "dbb1df9a-b783-4591-a112-2b32c7251ae0")
 	)
 	(wire
 		(pts
-			(xy 170.18 67.31) (xy 181.61 67.31)
+			(xy 191.77 120.65) (xy 222.25 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e04141e2-6064-4b7f-bdd2-5acc832ca117")
+		(uuid "de0685ec-cf4e-4439-99b6-2fd6ea3fcd80")
 	)
 	(wire
 		(pts
-			(xy 181.61 80.01) (xy 181.61 77.47)
+			(xy 222.25 101.6) (xy 222.25 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1482,9 +1758,81 @@
 		)
 		(uuid "e75d5302-90bd-4f24-87c4-fabc3353b3ac")
 	)
+	(text "Fixed 100k R\nand 100k rheostat\nfor feedback\nvoltage divider"
+		(exclude_from_sim no)
+		(at 243.078 99.822 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3381d3ef-730c-4b2b-9d57-87c121e49c0e")
+	)
+	(text "Schottky diode used\nas freewheeling diode\nto minimize fwd voltage \ndrop and reverse \nrecovery time"
+		(exclude_from_sim no)
+		(at 152.146 101.854 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "522b61f7-5c9a-4354-a624-666b5dc62f37")
+	)
+	(text "Bulk input cap, \nplace close to \ninput terminal"
+		(exclude_from_sim no)
+		(at 94.742 101.854 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "56a03d55-57a3-4492-9267-771eeb5f4b59")
+	)
+	(text "High freq bypass\nplace near switch\nand inductor"
+		(exclude_from_sim no)
+		(at 182.118 101.092 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a32f88ac-30d0-4bee-9a5c-00125ecc820f")
+	)
+	(text "High freq input\nbypass cap\nplace near switch\nand inductor"
+		(exclude_from_sim no)
+		(at 121.412 102.108 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d6fb855e-9ad9-4349-bc8b-d88caec9f278")
+	)
+	(text "Potentiometer\nconfigured as\na rheostat"
+		(exclude_from_sim no)
+		(at 212.852 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "db85f0cd-93b7-49d4-9875-980109a2c036")
+	)
 	(hierarchical_label "FB"
 		(shape input)
-		(at 194.31 90.17 270)
+		(at 246.38 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4d0ac205-11e4-44ed-8be3-bc52d6f87d7c")
+	)
+	(hierarchical_label "in"
+		(shape input)
+		(at 87.63 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1492,11 +1840,35 @@
 			)
 			(justify right)
 		)
-		(uuid "4d0ac205-11e4-44ed-8be3-bc52d6f87d7c")
+		(uuid "66388c27-f547-4d5c-aa8a-509037fdd967")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 87.63 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7b5fa187-c92c-44b2-be09-4299bfc2bc46")
+	)
+	(hierarchical_label "out"
+		(shape input)
+		(at 246.38 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b333a929-8202-410b-8678-a5976a67acd5")
 	)
 	(hierarchical_label "SW"
 		(shape input)
-		(at 142.24 90.17 270)
+		(at 88.9 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1507,189 +1879,16 @@
 		(uuid "ff5f6c79-d866-4f16-a351-0df2552a018f")
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
-		(at 125.73 67.31 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0abcadce-f8a3-4e18-bd89-c59aa73d1289")
-		(property "Reference" "J3"
-			(at 128.3462 60.7822 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "Term_2"
-			(at 128.3462 63.4746 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Altech:Altech_AK100_1x02_P5.00mm"
-			(at 104.14 72.39 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/short/q7wbhd"
-			(at 104.14 68.58 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 125.73 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part #" "1935161"
-			(at 104.14 69.85 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "UPL #" "10.003"
-			(at 102.87 71.12 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fb4cdba0-539e-40b2-bde1-2205fadfa54d")
-		)
-		(pin "2"
-			(uuid "ebdd93b9-8b10-4c7a-ad8d-0ba50e39fdf4")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:TIP120-OCI_UPL_4_Semiconductors")
-		(at 142.24 69.85 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3bf4d6c0-9b3e-45a2-b972-0a9cb045ccb8")
-		(property "Reference" "Q1"
-			(at 142.24 61.5188 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TIP120"
-			(at 142.24 63.8302 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabUp"
-			(at 139.7 59.69 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/short/q75wn4"
-			(at 138.43 58.42 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 142.24 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part #" "TIP120"
-			(at 144.78 59.69 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "UPL #" "4.023"
-			(at 146.05 59.69 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "abd14b70-15c6-4bf9-b2be-e09a93def832")
-		)
-		(pin "2"
-			(uuid "5b057a12-60ac-4577-bc58-834cb5e3dabb")
-		)
-		(pin "3"
-			(uuid "62add1b2-c40f-4d95-86bd-8331ae5f74a4")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 170.18 76.2 0)
+		(at 191.77 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "4cb3ac91-b64a-4551-9a52-e8d06813be7c")
-		(property "Reference" "C5"
-			(at 173.99 69.85 0)
+		(property "Reference" "C7"
+			(at 197.358 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1698,7 +1897,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 171.45 72.39 0)
+			(at 194.818 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1707,7 +1906,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm"
-			(at 171.1452 80.01 0)
+			(at 192.7352 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1716,7 +1915,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.18 76.2 0)
+			(at 191.77 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1725,7 +1924,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 170.18 76.2 0)
+			(at 191.77 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1742,23 +1941,23 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "C5")
+					(reference "C7")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 151.13 76.2 270)
+		(lib_id "Device:C")
+		(at 130.81 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "58ffc672-3c2d-4815-ba54-46b6a72a9cb4")
-		(property "Reference" "D2"
-			(at 153.162 75.0316 90)
+		(uuid "586da9b3-b910-4e71-9b7a-c84743538bed")
+		(property "Reference" "C6"
+			(at 136.398 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1766,8 +1965,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D"
-			(at 153.162 77.343 90)
+		(property "Value" "1uF"
+			(at 133.858 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1775,8 +1974,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 151.13 76.2 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 131.7752 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1785,7 +1984,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 151.13 76.2 0)
+			(at 130.81 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1794,7 +1993,78 @@
 			)
 		)
 		(property "Description" ""
-			(at 151.13 76.2 0)
+			(at 130.81 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6ca6f40-5205-42d8-bef2-d1aa59b8dad2")
+		)
+		(pin "2"
+			(uuid "64a4840d-42e6-4e72-87fa-ad244a82dabc")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRLZ44N")
+		(at 146.05 60.96 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3cb91ab-3e6e-413f-b7d8-9228ac5e4cb8")
+		(property "Reference" "Q1"
+			(at 150.622 60.198 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRLZ44N"
+			(at 150.622 57.658 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
+			(at 147.955 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf"
+			(at 149.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 146.05 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1803,275 +2073,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "b4f4b130-81d3-4396-a819-cfe424c86ff8")
+			(uuid "57e64030-a489-4cb9-a6bc-0790d0c1c1b3")
+		)
+		(pin "3"
+			(uuid "d8f4f6f1-e38f-4b8f-b4a2-78130bd18363")
 		)
 		(pin "1"
-			(uuid "9c476775-fd95-4834-842c-5f9e32648acb")
+			(uuid "e9023dc8-9c03-438b-bb9d-0fa06a70c9d8")
 		)
 		(instances
-			(project "BREAD_Slice"
+			(project ""
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 170.18 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "62a50c38-5fd9-49f5-8ffa-84341ef69fec")
-		(property "Reference" "#PWR016"
-			(at 170.18 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.307 93.2942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "41c15556-e732-4a30-b1a8-a131e0e90947")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 204.47 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "700746c5-6a2f-462f-96fa-abf6f273dff9")
-		(property "Reference" "#PWR019"
-			(at 204.47 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 204.597 93.2942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c573204c-961b-47b5-be9f-a922e731a65b")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 181.61 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "83cded4b-d25d-4422-91b5-72e7ab2142cf")
-		(property "Reference" "#PWR017"
-			(at 181.61 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 181.737 93.2942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 181.61 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5a2f96c3-6cb9-4edc-a622-30b984014510")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 133.35 73.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "88def603-2993-4c9d-8ccc-88ef78ed558f")
-		(property "Reference" "#PWR014"
-			(at 133.35 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 133.477 78.0542 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.35 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 133.35 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.35 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05fe3d90-6b1d-4e43-aa7b-b1114946f469")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR014")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -2079,7 +2092,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 181.61 71.12 0)
+		(at 222.25 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2087,7 +2100,7 @@
 		(dnp no)
 		(uuid "a40fbbd1-bc8a-4afe-a86a-2e11b5a62d95")
 		(property "Reference" "R1"
-			(at 183.3372 69.9516 0)
+			(at 224.282 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2096,7 +2109,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 183.3372 72.263 0)
+			(at 223.9772 79.883 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2105,7 +2118,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal"
-			(at 182.626 71.374 90)
+			(at 223.266 78.994 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2114,7 +2127,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.61 71.12 0)
+			(at 222.25 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2123,7 +2136,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 71.12 0)
+			(at 222.25 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2148,7 +2161,7 @@
 	)
 	(symbol
 		(lib_id "BREAD_Slice-rescue:R_POT_US-Device")
-		(at 181.61 83.82 0)
+		(at 222.25 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2156,7 +2169,7 @@
 		(dnp no)
 		(uuid "a8bf646b-4426-4fb8-b42b-0739b55d568e")
 		(property "Reference" "RV1"
-			(at 179.9082 82.6516 0)
+			(at 220.5482 104.2416 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2165,7 +2178,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 179.9082 84.963 0)
+			(at 220.5482 106.553 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2174,7 +2187,7 @@
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical"
-			(at 181.61 83.82 0)
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2183,7 +2196,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.61 83.82 0)
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2192,7 +2205,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 83.82 0)
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2219,81 +2232,17 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 151.13 88.9 0)
+		(lib_id "Device:L_Ferrite")
+		(at 177.8 63.5 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c71b33a9-3b2f-4a8a-813a-8572d0b314be")
-		(property "Reference" "#PWR015"
-			(at 151.13 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.257 93.2942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 151.13 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.13 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 151.13 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9b67dc3d-d646-4e76-95e8-4734ad0c6848")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BREAD_Slice-rescue:INDUCTOR-pspice")
-		(at 160.02 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c7eb3677-75b3-4e92-b4e6-6e51dd698048")
+		(fields_autoplaced yes)
+		(uuid "bd206270-dda2-43b4-88df-c6689226deae")
 		(property "Reference" "L2"
-			(at 160.02 61.849 0)
+			(at 177.8 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2301,15 +2250,15 @@
 			)
 		)
 		(property "Value" "560 uH"
-			(at 160.02 64.1604 0)
+			(at 177.8 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Inductor_THT:L_Radial_D28.0mm_P29.20mm"
-			(at 160.02 67.31 0)
+		(property "Footprint" "Inductor_THT:L_Radial_D27.9mm_P19.05mm_Vishay_IHB-3"
+			(at 177.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2318,7 +2267,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 67.31 0)
+			(at 177.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2326,8 +2275,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 160.02 67.31 0)
+		(property "Description" "Inductor with ferrite core"
+			(at 177.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2336,13 +2285,13 @@
 			)
 		)
 		(pin "2"
-			(uuid "d5ee18b1-d071-4cb8-a364-1fc8b58e5b51")
+			(uuid "207d6ccd-7e11-4314-976b-c7a8ef885c27")
 		)
 		(pin "1"
-			(uuid "3039e765-6ecd-48a7-9f50-40226bfeac4d")
+			(uuid "1ee0041e-f25f-49fb-8fe9-bf0b5ed417bd")
 		)
 		(instances
-			(project "BREAD_Slice"
+			(project ""
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
 					(reference "L2")
 					(unit 1)
@@ -2351,16 +2300,34 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:GND-power")
-		(at 186.69 88.9 0)
+		(lib_id "Device:C")
+		(at 104.14 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d40bd77d-eb06-4ae8-8690-2eea4c979a52")
-		(property "Reference" "#PWR018"
-			(at 186.69 95.25 0)
+		(uuid "e4141bf9-4627-4037-a6b4-1409a15d4af8")
+		(property "Reference" "C5"
+			(at 97.536 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at 94.996 94.488 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm"
+			(at 105.1052 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2368,25 +2335,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 186.817 93.2942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 88.9 0)
+		(property "Datasheet" "~"
+			(at 104.14 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2395,7 +2345,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 88.9 0)
+			(at 104.14 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2404,64 +2354,50 @@
 			)
 		)
 		(pin "1"
-			(uuid "5d2195b3-fa77-4419-94e7-bb5ecd927312")
+			(uuid "9bece8f5-3610-421e-affe-9c41580a3e42")
+		)
+		(pin "2"
+			(uuid "4169fb34-93e8-44c0-b15c-8c9b9e289a93")
 		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "#PWR018")
+					(reference "C5")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
-		(at 212.09 71.12 0)
+		(lib_id "Diode:1N5822")
+		(at 163.83 92.71 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dbf713f4-35d6-4e65-b3c7-31bbbd96662f")
-		(property "Reference" "J4"
-			(at 214.3252 67.8688 0)
+		(fields_autoplaced yes)
+		(uuid "e50537f8-0945-4c10-866b-7d50080b7a31")
+		(property "Reference" "D2"
+			(at 166.37 91.1224 90)
 			(effects
 				(font
-					(size 1.524 1.524)
+					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "Term_2"
-			(at 214.3252 70.5612 0)
+		(property "Value" "1N5822"
+			(at 166.37 93.6624 90)
 			(effects
 				(font
-					(size 1.524 1.524)
+					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Altech:Altech_AK100_1x02_P5.00mm"
-			(at 233.68 66.04 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/short/q7wbhd"
-			(at 233.68 69.85 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 212.09 71.12 0)
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+			(at 159.385 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2469,34 +2405,101 @@
 				(hide yes)
 			)
 		)
-		(property "Part #" "1935161"
-			(at 233.68 68.58 0)
+		(property "Datasheet" "http://www.vishay.com/docs/88526/1n5820.pdf"
+			(at 163.83 92.71 0)
 			(effects
 				(font
-					(size 0.762 0.762)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "UPL #" "10.003"
-			(at 234.95 67.31 0)
+		(property "Description" "40V 3A Schottky Barrier Rectifier Diode, DO-201AD"
+			(at 163.83 92.71 0)
 			(effects
 				(font
-					(size 0.762 0.762)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "74e46e6a-32fa-4500-a812-e5cda7958e98")
 		)
 		(pin "1"
-			(uuid "82a61d48-e690-4e9d-9409-0cd9c133bccc")
+			(uuid "67ac20ad-a452-41f1-8096-da3603c8c6f0")
+		)
+		(pin "2"
+			(uuid "9488879e-9c8b-4fc5-a1da-fcb844e5de06")
 		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
-					(reference "J4")
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Heatsink_Pad")
+		(at 130.81 52.07 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc482811-0477-4cc3-9b05-abf63aedafed")
+		(property "Reference" "HS2"
+			(at 127 50.1649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Heatsink_Pad"
+			(at 127 52.7049 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "KML-Custom:Thermal Pad"
+			(at 130.5052 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.5052 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Heatsink with electrical connection, 1 pin"
+			(at 130.81 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac379b62-227f-4589-8159-0038ea73640c")
+		)
+		(instances
+			(project ""
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/1adedb24-3b07-4afd-a323-e284d7d9cbd6"
+					(reference "HS2")
 					(unit 1)
 				)
 			)
