@@ -5225,7 +5225,7 @@
 		(descr "Potentiometer, vertical, Bourns 3266W, https://www.bourns.com/docs/Product-Datasheets/3266.pdf")
 		(tags "Potentiometer vertical Bourns 3266W")
 		(property "Reference" "RV1"
-			(at -2.54 -2.27 360)
+			(at -2.54 -2.27 0)
 			(layer "F.SilkS")
 			(uuid "1e25c11d-ffea-4266-948b-8520b5a30a2c")
 			(effects
@@ -5236,7 +5236,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at -2.54 4.73 360)
+			(at -2.54 4.73 0)
 			(layer "F.Fab")
 			(uuid "31e3f303-9c25-4b99-8680-affd3becfcdb")
 			(effects
@@ -5462,7 +5462,7 @@
 			(uuid "1f53581a-e981-471c-b279-cd3362e56fbf")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -3.175 1.23 360)
+			(at -3.175 1.23 0)
 			(layer "F.Fab")
 			(uuid "937939b3-b4df-4069-bd7a-83dd02d4b2eb")
 			(effects
@@ -6954,7 +6954,7 @@
 		(descr "TO-220-3, Horizontal, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf")
 		(tags "TO-220-3 Horizontal RM 2.54mm")
 		(property "Reference" "Q1"
-			(at 2.54 -20.58 360)
+			(at 2.54 -20.58 0)
 			(layer "F.SilkS")
 			(uuid "298401b1-305d-482a-8b6f-03fdba3a4d16")
 			(effects
@@ -6965,7 +6965,7 @@
 			)
 		)
 		(property "Value" "IRLZ44N"
-			(at 2.54 2 360)
+			(at 2.54 2 0)
 			(layer "F.Fab")
 			(uuid "28b5042f-9398-4a9d-81ec-7162f0b59ad5")
 			(effects
@@ -7251,7 +7251,7 @@
 			(uuid "b731a090-8b12-4973-b7b1-ec5c08c44957")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 -20.58 360)
+			(at 2.54 -20.58 0)
 			(layer "F.Fab")
 			(uuid "44e8ad9f-8d10-45e0-9c7f-b934020922b6")
 			(effects
@@ -7595,7 +7595,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C6"
-			(at 0 1.85 360)
+			(at 0 1.85 0)
 			(layer "B.SilkS")
 			(uuid "a667767b-139b-4653-aed5-8f2187e5c731")
 			(effects
@@ -7607,7 +7607,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 0 -1.85 360)
+			(at 0 -1.85 0)
 			(layer "B.Fab")
 			(uuid "073a8f49-7c2a-4696-9e84-a50d4a6d30e9")
 			(effects
@@ -7766,7 +7766,7 @@
 			(uuid "afaffd3c-ae7e-4ae4-a439-54cb57ee47e3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "cbcc35f6-7d72-46e8-88ab-8c9dfff02d68")
 			(effects
@@ -9547,18 +9547,6 @@
 		(at 131.85 114.555 0)
 		(layer "B.SilkS")
 		(uuid "056806f2-56cf-4fe8-84b5-e588bde33964")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify bottom mirror)
-		)
-	)
-	(gr_text "5V I2C \nConnector"
-		(at 150.22 129.24 0)
-		(layer "B.SilkS")
-		(uuid "798f7164-8fde-48a0-b760-450a5bdaf8cf")
 		(effects
 			(font
 				(size 1 1)
