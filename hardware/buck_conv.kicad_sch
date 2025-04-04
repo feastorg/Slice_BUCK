@@ -981,7 +981,7 @@
 			(pin_names
 				(offset 0)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "HS"
@@ -1951,14 +1951,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f4302ae8-eafb-4437-84df-2505c496f9b2")
+			(uuid "a8f92303-edf5-4fee-bcb1-793935ea5402")
 		)
 		(pin "2"
-			(uuid "e2c8321f-f2d1-43fd-8fc3-3cdc027ff6f3")
+			(uuid "4f31f27c-302c-4cf8-af08-e3c19192f73c")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "C7")
 					(unit 1)
 				)
@@ -2020,15 +2020,82 @@
 			)
 		)
 		(pin "1"
-			(uuid "b6ca6f40-5205-42d8-bef2-d1aa59b8dad2")
+			(uuid "3642f8cd-a968-4da2-9789-94812b8e65ad")
 		)
 		(pin "2"
-			(uuid "64a4840d-42e6-4e72-87fa-ad244a82dabc")
+			(uuid "16989c39-2052-4f58-9cdf-cc79ce6e045f")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Heatsink_Pad")
+		(at 130.81 52.07 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "858860a0-cfda-441f-8010-85ea6ab4a19a")
+		(property "Reference" "HS2"
+			(at 127 50.1649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Heatsink_Pad"
+			(at 127 52.7049 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "kml-custom:Thermal Pad"
+			(at 130.5052 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.5052 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Heatsink with electrical connection, 1 pin"
+			(at 130.81 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "403c17a4-bb76-42b9-917a-184dbb8360b2")
+		)
+		(instances
+			(project ""
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
+					(reference "HS2")
 					(unit 1)
 				)
 			)
@@ -2091,17 +2158,17 @@
 			)
 		)
 		(pin "2"
-			(uuid "57e64030-a489-4cb9-a6bc-0790d0c1c1b3")
+			(uuid "f19a5a7c-8477-49ab-9af2-b3cae334156d")
 		)
 		(pin "3"
-			(uuid "d8f4f6f1-e38f-4b8f-b4a2-78130bd18363")
+			(uuid "136fafaa-4fc6-48dc-9cae-f3c46c1781fa")
 		)
 		(pin "1"
-			(uuid "e9023dc8-9c03-438b-bb9d-0fa06a70c9d8")
+			(uuid "ef2b5c78-5721-40e3-9557-6c8cb2934e74")
 		)
 		(instances
-			(project ""
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "Q1")
 					(unit 1)
 				)
@@ -2163,14 +2230,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2d557ca4-4ce4-48df-8c38-9379499fcefb")
+			(uuid "b0fce94e-8dea-46b3-84a3-c5ee46b362bb")
 		)
 		(pin "2"
-			(uuid "cff81e56-d6f5-406f-9a4b-2cae9bf7bcef")
+			(uuid "18594ef3-b10d-45df-b281-2af19482a87c")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "R1")
 					(unit 1)
 				)
@@ -2232,17 +2299,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "dfa52692-5e04-45f6-970a-f414c829b779")
+			(uuid "7a160cb3-444f-426e-8a79-c46c3864303f")
 		)
 		(pin "2"
-			(uuid "eb067dfd-6854-4eff-aea5-86f63fb902e3")
+			(uuid "c788e166-6ac8-41a2-ab69-8f41ed12b8e6")
 		)
 		(pin "3"
-			(uuid "36e4f82e-86c4-4577-a3c4-d03d8ebe3184")
+			(uuid "06c9a384-d97a-4e77-8a52-01f839244c97")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "RV1")
 					(unit 1)
 				)
@@ -2303,14 +2370,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "207d6ccd-7e11-4314-976b-c7a8ef885c27")
+			(uuid "2abbb38d-bff7-47a2-9af4-f445db91f441")
 		)
 		(pin "1"
-			(uuid "1ee0041e-f25f-49fb-8fe9-bf0b5ed417bd")
+			(uuid "f90705a7-27e3-437f-9aea-987abb8cfe43")
 		)
 		(instances
-			(project ""
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "L2")
 					(unit 1)
 				)
@@ -2372,14 +2439,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9bece8f5-3610-421e-affe-9c41580a3e42")
+			(uuid "cfe74af4-ca71-4d20-9fe4-4256aaa9c6af")
 		)
 		(pin "2"
-			(uuid "4169fb34-93e8-44c0-b15c-8c9b9e289a93")
+			(uuid "4273cc26-03d7-4b08-b77d-a7ac0e753485")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "C5")
 					(unit 1)
 				)
@@ -2442,82 +2509,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "67ac20ad-a452-41f1-8096-da3603c8c6f0")
+			(uuid "2386070b-1dbe-4dd9-bb22-cf2d2dd7f0cf")
 		)
 		(pin "2"
-			(uuid "9488879e-9c8b-4fc5-a1da-fcb844e5de06")
+			(uuid "960f464e-f163-433e-9e19-e233074cb9b5")
 		)
 		(instances
 			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/bcddcbdb-40ba-43e9-ba1c-26ee4c61fa84"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:Heatsink_Pad")
-		(at 130.81 52.07 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fc482811-0477-4cc3-9b05-abf63aedafed")
-		(property "Reference" "HS2"
-			(at 127 50.1649 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Heatsink_Pad"
-			(at 127 52.7049 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "KML-Custom:Thermal Pad"
-			(at 130.5052 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 130.5052 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Heatsink with electrical connection, 1 pin"
-			(at 130.81 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ac379b62-227f-4589-8159-0038ea73640c")
-		)
-		(instances
-			(project ""
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/b645e956-7376-4c87-8c1d-444a21ed343a"
-					(reference "HS2")
 					(unit 1)
 				)
 			)
