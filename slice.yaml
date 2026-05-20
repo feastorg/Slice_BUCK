@@ -1,0 +1,152 @@
+schema_version: "1.0"
+
+# ── Identity ──────────────────────────────────────────────────────────────────
+id: "slice-buck"
+name: "Buck Converter / Analog Signal Generator"
+status: "concept"
+category: "power"
+
+summary: "Programmable buck converter slice for variable DC output voltage."
+description: null
+
+# ── Versioning ────────────────────────────────────────────────────────────────
+version:
+  hardware: "0.1.0"
+  firmware: "0.1.0"
+  manifest: "0.1.0"
+
+# ── Compatibility ─────────────────────────────────────────────────────────────
+compatibility:
+  slice_spec: ">=0.1.0 <0.2.0"
+  crumbs_protocol: null
+  anolis_provider_api: null
+
+# ── Hardware ──────────────────────────────────────────────────────────────────
+hardware:
+  mcu:
+    type: "dev-board-socket"
+    form_factor: "nano"
+    primary: "ATmega328P"
+    supported:
+      - "ATmega328P"
+  primary_ic: null
+  hw_gen_current: 1
+  hw_gen_supported: [1]
+  pcb:
+    layers: 2
+    thickness: "1.6mm"
+    copper_weight: "1oz"
+    dimensions: "70mm x 100mm"
+  connectors:
+    - ref: "J1"
+      type: "slice-bus-10pin"
+      purpose: "power-and-i2c"
+  mounting:
+    pattern: "slice-standard-v0"
+    hole_size: "M3"
+    inset: "5mm"
+  pcb_color_prototype: null
+  pcb_color_production: null
+  enclosure:
+    supported: false
+    path: null
+
+# ── Electrical ────────────────────────────────────────────────────────────────
+electrical:
+  input_voltage: "12V"
+  logic_voltage: "5V"
+  max_current: null
+  protection: null
+  isolation: null
+
+# ── Interfaces ────────────────────────────────────────────────────────────────
+interfaces:
+  host:
+    type: "i2c"
+    address_default: null
+    address_configurable: false
+  data:
+    inputs:
+      - name: "FB"
+        type: "analog-voltage-divider"
+    outputs:
+      - name: "VOUT"
+        type: "pwm-buck"
+
+# ── Capabilities ──────────────────────────────────────────────────────────────
+capabilities:
+  - id: "dc_voltage_output"
+    channels: 1
+    control_modes: ["open_loop"]
+
+# ── Firmware ──────────────────────────────────────────────────────────────────
+firmware:
+  required: true
+  path: "firmware/"
+  language: "c++"
+  framework: "arduino"
+  targets:
+    - "nano"
+  lib_deps: []
+
+# ── Protocol ──────────────────────────────────────────────────────────────────
+protocol:
+  type: "serial"
+  discovery:
+    supported: false
+  commands: []
+
+# ── Software ──────────────────────────────────────────────────────────────────
+software: null
+
+# ── Artifacts ─────────────────────────────────────────────────────────────────
+artifacts:
+  schematic: "hardware/BREAD_Slice.kicad_sch"
+  pcb: "hardware/BREAD_Slice.kicad_pcb"
+  firmware: "firmware/"
+  docs: null
+  bom: "documentation/BOM_TEMP.ods"
+  gerbers: null
+  pick_and_place: null
+  datasheets: []
+
+# ── Manufacturing ─────────────────────────────────────────────────────────────
+manufacturing: null
+
+# ── Validation ────────────────────────────────────────────────────────────────
+validation: null
+
+# ── Safety ────────────────────────────────────────────────────────────────────
+safety: null
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+dependencies: null
+
+# ── Relations ─────────────────────────────────────────────────────────────────
+related: null
+
+# ── Maintainers ───────────────────────────────────────────────────────────────
+maintainers:
+  - name: "Cameron Brooks"
+    role: "owner"
+
+# ── License ───────────────────────────────────────────────────────────────────
+license:
+  hardware: "CERN-OHL-S-2.0"
+  firmware: "GPL-3.0-or-later"
+  software: null
+  docs: "CC-BY-4.0"
+
+# ── Repository ────────────────────────────────────────────────────────────────
+repository:
+  url: "https://github.com/feastorg/Slice_BUCK"
+
+# ── Metadata ──────────────────────────────────────────────────────────────────
+metadata:
+  created: "2026-05-19"
+  updated: "2026-05-19"
+  tags:
+    - "power"
+    - "buck-converter"
+    - "dc-dc"
+    - "signal-generator"
