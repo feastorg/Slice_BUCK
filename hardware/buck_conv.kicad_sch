@@ -5,7 +5,7 @@
 	(uuid "c3105078-b749-494d-878e-45527a35504c")
 	(paper "A4")
 	(lib_symbols
-		(symbol "BREAD_Slice-rescue:R_POT_US-Device"
+		(symbol "Device:R_POT_US"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -79,7 +79,7 @@
 					)
 				)
 			)
-			(symbol "R_POT_US-Device_0_1"
+			(symbol "R_POT_US_0_1"
 				(polyline
 					(pts
 						(xy 0 2.54) (xy 0 2.286)
@@ -165,7 +165,7 @@
 					)
 				)
 			)
-			(symbol "R_POT_US-Device_1_1"
+			(symbol "R_POT_US_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -2415,7 +2415,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:R_POT_US-Device")
+		(lib_id "Device:R_POT_US")
 		(at 222.25 105.41 0)
 		(unit 1)
 		(body_style 1)
