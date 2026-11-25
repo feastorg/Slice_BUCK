@@ -5799,7 +5799,7 @@
 		(descr "Inductor, Radial series, Radial, pin pitch=19.05mm, diameter=27.9mm, height=21.34mm, Vishay, IHB-3, http://www.vishay.com/docs/34015/ihb.pdf")
 		(tags "Inductor Radial series Radial pin pitch 19.05mm  diameter 27.9mm height 21.34mm Vishay IHB-3")
 		(property "Reference" "L2"
-			(at 9.525 -15.2 0)
+			(at 9.525 -3.3 0)
 			(layer "F.SilkS")
 			(uuid "118b68bd-649d-44dc-8222-3dd2d1f7294b")
 			(effects
@@ -7417,13 +7417,13 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C1"
-			(at 0 1.85 180)
+			(at 0 0.05 270)
 			(layer "B.SilkS")
 			(uuid "7bace727-a981-4d07-b1d7-b1149d265ddd")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.8 0.8)
+					(thickness 0.12)
 				)
 				(justify mirror)
 			)
@@ -7624,7 +7624,7 @@
 		(descr "TSOT, 6 Pin (https://www.jedec.org/sites/default/files/docs/MO-193D.pdf variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSOT TO_SOT_SMD")
 		(property "Reference" "U1"
-			(at -1.2 2.695 0)
+			(at -2.35 2.645 0)
 			(layer "B.SilkS")
 			(uuid "6484bd4a-9bf6-4fa3-af3e-bf6ab1a8ef68")
 			(effects
@@ -7914,13 +7914,13 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C2"
-			(at 0 -1.745 180)
+			(at 0 0 90)
 			(layer "B.SilkS")
 			(uuid "6f5124c0-c832-42f2-8d6a-7a8be9ad2c24")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.8 0.8)
+					(thickness 0.12)
 				)
 				(justify mirror)
 			)
@@ -8121,7 +8121,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C3"
-			(at 3.3 -0.055 0)
+			(at 3.3 0.995 0)
 			(layer "B.SilkS")
 			(uuid "839b2755-238e-48f8-9b89-f315b6e2cbaa")
 			(effects
@@ -8328,7 +8328,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C4"
-			(at 3.3 -0.105 0)
+			(at 3.3 -0.905 0)
 			(layer "B.SilkS")
 			(uuid "f6a2c06c-f798-4789-9577-584a111da490")
 			(effects
@@ -8535,7 +8535,7 @@
 		(descr "Inductor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "inductor")
 		(property "Reference" "L1"
-			(at 3.15 -0.105 0)
+			(at 3.05 0.195 0)
 			(layer "B.SilkS")
 			(uuid "7259b2bd-e8ee-4e18-ba8a-6f87a7da75e3")
 			(effects
@@ -8985,12 +8985,12 @@
 		)
 	)
 	(gr_text "ARDUINO NANO"
-		(at 150.22 116.49 90)
+		(at 150.22 120.6 90)
 		(layer "F.SilkS")
 		(uuid "d2c2573f-95ca-4b27-b2b0-4a4afcd9537c")
 		(effects
 			(font
-				(size 2 2)
+				(size 1.5 1.5)
 				(thickness 0.15)
 			)
 		)
