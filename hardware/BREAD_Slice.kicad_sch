@@ -3570,12 +3570,6 @@
 		(uuid "9fd8564d-ce71-4be4-9c66-8570e02be32c")
 	)
 	(junction
-		(at 147.32 110.49)
-		(diameter 0)
-		(color 128 77 0 1)
-		(uuid "b2c05c98-83ba-448b-acbf-3a621e59a543")
-	)
-	(junction
 		(at 26.67 77.47)
 		(diameter 0)
 		(color 194 0 194 1)
@@ -3626,7 +3620,7 @@
 		(uuid "465b2e13-fa86-4c40-9e77-56f03ce53bdd")
 	)
 	(no_connect
-		(at 27.94 151.13)
+		(at 27.94 143.51)
 		(uuid "64347c5f-4342-430a-a35a-36e6c60c4cb3")
 	)
 	(no_connect
@@ -3707,7 +3701,7 @@
 	)
 	(wire
 		(pts
-			(xy 16.51 143.51) (xy 27.94 143.51)
+			(xy 16.51 151.13) (xy 27.94 151.13)
 		)
 		(stroke
 			(width 0.2032)
@@ -3715,17 +3709,6 @@
 			(color 160 32 240 1)
 		)
 		(uuid "055ca4f0-40c7-4916-bb61-ecae4c1583d5")
-	)
-	(wire
-		(pts
-			(xy 121.92 96.52) (xy 128.27 96.52)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 0 1)
-		)
-		(uuid "0b18b734-9e3f-4713-bc9b-df98d530779a")
 	)
 	(polyline
 		(pts
@@ -3964,17 +3947,6 @@
 			(color 0 132 132 1)
 		)
 		(uuid "6c67e4f6-9d04-4539-b356-b76e915ce848")
-	)
-	(wire
-		(pts
-			(xy 121.92 99.06) (xy 121.92 110.49)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 128 77 0 1)
-		)
-		(uuid "742d4dda-e30c-42ee-bcca-0d5fc1a2ac8c")
 	)
 	(wire
 		(pts
@@ -4228,17 +4200,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 105.41) (xy 147.32 110.49)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 128 77 0 1)
-		)
-		(uuid "c03132b7-36ef-4dae-b243-4b7bec8aea17")
-	)
-	(wire
-		(pts
 			(xy 41.91 170.18) (xy 41.91 171.45)
 		)
 		(stroke
@@ -4359,17 +4320,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 110.49) (xy 147.32 110.49)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 128 77 0 1)
-		)
-		(uuid "e22b0c65-bcfc-454e-a7d6-f3a024e4e0f5")
-	)
-	(wire
-		(pts
 			(xy 54.61 36.83) (xy 54.61 26.67)
 		)
 		(stroke
@@ -4487,7 +4437,7 @@
 		(uuid "01369a8a-bf8d-4ffb-8dad-77317197d2d2")
 	)
 	(label "switching"
-		(at 16.51 143.51 0)
+		(at 16.51 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5195,86 +5145,6 @@
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 116.84 99.06 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0bf6389d-5c57-4ea3-819f-af7dff9dfe96")
-		(property "Reference" "J3"
-			(at 116.84 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x02"
-			(at 116.84 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal"
-			(at 116.84 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 116.84 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "971ff0d5-8b44-47ae-8b67-c45b588057e3")
-		)
-		(pin "1"
-			(uuid "808db501-325a-4df3-a8be-92af556ec073")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687"
-					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -7436,7 +7306,7 @@
 				(justify left top)
 			)
 		)
-		(pin "FB" input
+		(pin "FB" output
 			(at 158.75 86.36 0)
 			(uuid "e85dc3de-6f75-49bf-bc07-572b088396e0")
 			(effects
@@ -7446,7 +7316,7 @@
 				(justify right)
 			)
 		)
-		(pin "out" input
+		(pin "out" output
 			(at 158.75 96.52 0)
 			(uuid "13407b68-33af-4f1e-a464-7049ba4a08b2")
 			(effects
@@ -7456,29 +7326,9 @@
 				(justify right)
 			)
 		)
-		(pin "SW" input
+		(pin "PWM" input
 			(at 128.27 86.36 180)
 			(uuid "6554f8ae-440f-4787-8368-2bb09a8960fa")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "GND" input
-			(at 147.32 105.41 270)
-			(uuid "7894cd81-d2e5-44b0-b93e-4cac24c3ad1e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "in" input
-			(at 128.27 96.52 180)
-			(uuid "3a8f7dcc-a5e2-42a1-8913-4aea9a33ecae")
 			(effects
 				(font
 					(size 1.27 1.27)
