@@ -35,3 +35,6 @@ design-block-lib-table
 # filter). Per-developer local state, not design intent -- tracking it dirties
 # the working tree every time anyone opens the board.
 *.kicad_prl
+
+# SPICE netlists and decks generated from hardware/sim/ by hardware/sim/check.py
+build/

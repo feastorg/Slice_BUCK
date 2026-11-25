@@ -1,0 +1,239 @@
+# Expected behaviour of the BUCK switch stage, worked by hand from the schematic.
+#
+# Stage: 12 V bus (V1) -> C5/C6 -> Q1 DMP6023LE high-side P-FET (R6 10k gate-source,
+# R5 22R gate), Q4/Q5 MMBT4401/4403 push-pull driver with bases on R4 2.2k to +12 V
+# and Q3 2N7002 to ground, D9 (V2 0/5 V, 31.25 kHz, through R201 25R) -> R2 100R -> Q3
+# gate with R3 10k to ground. D2 B560C freewheel, L2 220 uH (R101 80 mOhm), C7 100 uF,
+# R9 1k bleed, R7 20.0k / R8 10.0k to A0 with C8 100 nF. Load R100.
+#
+# Averaged CCM stage (ripple ignored), I = Vout / Reff, Reff = R100 || R9 || (R7 + R8):
+#   Vout = D (Vin - I Rds) - (1 - D) Vf(I) - I Rdcr
+#   Rds = 1 / (Kp (|Vgs| - |Vto|)) + Rd + Rs = 1 / (20 x 9.23) + 0.020 = 25.4 mOhm
+#         (the DMP6023 model in models/generic.lib at Vgs = -11.23 V)
+#   Vf(I) = N Vt ln(I / Is + 1) + I Rs with the SB560 model (Is 20 uA, N 1.15, Rs 25 m)
+#   Rdcr = 80 mOhm, Vin = 12 V (ideal bus). Switching times are not in this formula:
+#   the stage turns on about 27 ns after D9 rises and off about 0.44 us after it falls
+#   (t_on/t_off below: R4 2.2k has to lift the driver bases before Q4 can pull the
+#   gate up through the Miller plateau). Each on-time is 0.41 us long, 1.3 % of the
+#   32 us period, which adds 0.41/32 x (Vin + Vf) = 0.16 V at every switched duty.
+#   The switched Vout measures therefore allow 0.2 V (A0: 0.067 V) about the
+#   ideal-switch value; 100 % duty has no switching and keeps 2 %.
+# 100 % duty: Vout = Vin Reff / (Reff + Rds + Rdcr).
+# Light load (R100 = 1k, Reff = 491.8 ohm) is discontinuous: the inductor current
+#   ramps to Ipk = (Vin - Vout) D T / L and back to 0 in Ipk L / (Vout + Vf); Vout is
+#   the root of Ipk (D T + toff) / 2T = Vout / Reff.
+# A0 = Vout x R8 / (R7 + R8) = Vout / 3.
+# Vgs on: the gate sits one Veb of Q5 above Q3's drain: Vg = I_R4 Rds(Q3) + Veb(Q5) +
+#   I R5 with I = (Vin - Vg) / R6 = 1.12 mA, Veb = Vt ln(I / 650.6 aA) = 0.728 V,
+#   Vx = 5.45 mA x 2.1 ohm = 12 mV: Vgs = 0.766 - 12 = -11.23 V.
+# Vgs off: Q4 lifts the gate to within one Vbe of the source (0.6-0.75 V) and R6 then
+#   pulls it closer, so the off-state Vgs is between -0.75 V and 0 V. The DMP6023LE's
+#   threshold is -1 V at the least, so -0.75 V keeps Q1 off with 0.25 V to spare.
+
+mirrors = [
+  "Q1", "Q3", "Q4", "Q5", "D2", "L2",
+  "C5", "C6", "C7", "C8",
+  "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9",
+  "R107=R7", "R108=R8", "C108=C8",
+]
+
+# ---- DC: R107/R108/C108 (copies of R7/R8/C8) on an ideal 12 V
+
+# 12 x 10.0k / (20.0k + 10.0k) = 4.000 V
+[[measure]]
+name = "a0_at_12v"
+analysis = "dc"
+meas = "find v(/a0_12v) at=12"
+expect = 4.000
+rtol = 0.005
+
+# ---- TRAN cases: 31.25 kHz PWM (32 us), averages over 28-30 ms after start-up
+
+[[case]]
+name = "d25_r4"
+note = "25 % duty into 4 ohm"
+alter = ["alter @v2[pulse] = [ 0 5 0 10n 10n 7.99u 32u ]", "alter r100 = 4"]
+let = ["let vgs = v(/gate) - v(/vin)"]
+
+[[case]]
+name = "d50_r4"
+note = "50 % duty into 4 ohm"
+alter = ["alter @v2[pulse] = [ 0 5 0 10n 10n 15.99u 32u ]", "alter r100 = 4"]
+let = ["let vgs = v(/gate) - v(/vin)"]
+
+[[case]]
+name = "d90_r4"
+note = "90 % duty into 4 ohm"
+alter = ["alter @v2[pulse] = [ 0 5 0 10n 10n 28.79u 32u ]", "alter r100 = 4"]
+let = ["let vgs = v(/gate) - v(/vin)"]
+
+[[case]]
+name = "d100_r4"
+note = "100 % duty (D9 held high) into 4 ohm, about 3 A"
+alter = ["alter @v2[pulse] = [ 5 5 0 10n 10n 1u 32u ]", "alter r100 = 4"]
+let = ["let vgs = v(/gate) - v(/vin)"]
+
+[[case]]
+name = "d50_r1k"
+note = "50 % duty into 1 kohm: discontinuous, R9 || R100 || divider = 491.8 ohm, tau 49 ms"
+alter = ["alter @v2[pulse] = [ 0 5 0 10n 10n 15.99u 32u ]", "alter r100 = 1000"]
+tran = ".tran 25n 300m 298m 25n uic"
+
+# 0.25 (12 - 0.677 x 0.0254) - 0.75 Vf(0.677) - 0.677 x 0.08 = 2.696 V
+[[measure]]
+name = "vout_d25"
+analysis = "tran"
+case = "d25_r4"
+meas = "avg v(/out) from=28m to=30m"
+expect = 2.696
+atol = 0.2
+
+# 2.696 / 3
+[[measure]]
+name = "a0_d25"
+analysis = "tran"
+case = "d25_r4"
+meas = "avg v(/a0) from=28m to=30m"
+expect = 0.8988
+atol = 0.067
+
+# 0.5 (12 - 1.427 x 0.0254) - 0.5 Vf(1.427) - 1.427 x 0.08 = 5.684 V
+[[measure]]
+name = "vout_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "avg v(/out) from=28m to=30m"
+expect = 5.684
+atol = 0.2
+
+[[measure]]
+name = "a0_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "avg v(/a0) from=28m to=30m"
+expect = 1.8946
+atol = 0.067
+
+# see the header: -11.23 V
+[[measure]]
+name = "vgs_on_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "min vgs from=29m to=30m"
+expect = -11.235
+rtol = 0.02
+
+[[measure]]
+name = "vgs_off_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "max vgs from=29m to=30m"
+min = -0.75
+max = 0.05
+
+# output ripple, informational (C7 is ideal here: no ESR)
+[[measure]]
+name = "vout_pp_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "pp v(/out) from=29m to=30m"
+
+# 0.9 (12 - 2.633 x 0.0254) - 0.1 Vf(2.633) - 2.633 x 0.08 = 10.488 V
+[[measure]]
+name = "vout_d90"
+analysis = "tran"
+case = "d90_r4"
+meas = "avg v(/out) from=28m to=30m"
+expect = 10.488
+atol = 0.2
+
+[[measure]]
+name = "a0_d90"
+analysis = "tran"
+case = "d90_r4"
+meas = "avg v(/a0) from=28m to=30m"
+expect = 3.4958
+atol = 0.067
+
+# the 3.2 us off-time at 90 % is the shortest the firmware uses below its 97 % jump
+[[measure]]
+name = "vgs_off_d90"
+analysis = "tran"
+case = "d90_r4"
+meas = "max vgs from=29m to=30m"
+min = -0.75
+max = 0.05
+
+# 12 x 3.983 / (3.983 + 0.0254 + 0.08) = 11.691 V, 2.94 A
+[[measure]]
+name = "vout_d100"
+analysis = "tran"
+case = "d100_r4"
+meas = "avg v(/out) from=28m to=30m"
+expect = 11.691
+rtol = 0.02
+
+[[measure]]
+name = "a0_d100"
+analysis = "tran"
+case = "d100_r4"
+meas = "avg v(/a0) from=28m to=30m"
+expect = 3.897
+rtol = 0.02
+
+[[measure]]
+name = "vgs_d100"
+analysis = "tran"
+case = "d100_r4"
+meas = "avg vgs from=28m to=30m"
+expect = -11.235
+rtol = 0.02
+
+# discontinuous root (header): 10.892 V. Why the firmware regulates: 50 % duty gives
+# 10.9 V here against 5.7 V into 4 ohm.
+[[measure]]
+name = "vout_d50_light"
+analysis = "tran"
+case = "d50_r1k"
+meas = "avg v(/out) from=298m to=300m"
+expect = 10.892
+rtol = 0.05
+
+# switching delays, informational: D9 (after the pin's 25 ohm) crossing 2.5 V to the
+# switch node crossing 6 V, last edge in the window
+
+[[measure]]
+name = "t_on_d25"
+analysis = "tran"
+case = "d25_r4"
+meas = "trig v(/d9) val=2.5 rise=last targ v(/sw) val=6 rise=last"
+
+[[measure]]
+name = "t_off_d25"
+analysis = "tran"
+case = "d25_r4"
+meas = "trig v(/d9) val=2.5 fall=last targ v(/sw) val=6 fall=last"
+
+[[measure]]
+name = "t_on_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "trig v(/d9) val=2.5 rise=last targ v(/sw) val=6 rise=last"
+
+[[measure]]
+name = "t_off_d50"
+analysis = "tran"
+case = "d50_r4"
+meas = "trig v(/d9) val=2.5 fall=last targ v(/sw) val=6 fall=last"
+
+[[measure]]
+name = "t_on_d90"
+analysis = "tran"
+case = "d90_r4"
+meas = "trig v(/d9) val=2.5 rise=last targ v(/sw) val=6 rise=last"
+
+[[measure]]
+name = "t_off_d90"
+analysis = "tran"
+case = "d90_r4"
+meas = "trig v(/d9) val=2.5 fall=last targ v(/sw) val=6 fall=last"

@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "filename": "buck_stage.kicad_pro",
+    "version": 3
+  },
+  "schematic": {
+    "ngspice": {
+      "model_mode": 4
+    }
+  },
+  "sheets": [
+    [
+      "a7d3c1e2-4b5f-4c6a-9e80-b0c4b0c4f001",
+      "Root"
+    ]
+  ]
+}
