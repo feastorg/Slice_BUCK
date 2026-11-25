@@ -5375,7 +5375,7 @@
 				)
 			)
 		)
-		(property "MPN" "TBD: 100uF+ 25V low-ESR, 8x11.5 mm, P3.5, >=1.5 A rms ripple"
+		(property "MPN" "RNU1E181MDN1"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
