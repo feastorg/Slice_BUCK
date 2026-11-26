@@ -6643,7 +6643,7 @@
 		(descr "C, Radial series, Radial, pin pitch=3.50mm, diameter=8mm, height=11.5mm, Non-Polar Electrolytic Capacitor")
 		(tags "C Radial series Radial pin pitch 3.50mm diameter 8mm height 11.5mm Non-Polar Electrolytic Capacitor")
 		(property "Reference" "C7"
-			(at 1.75 -5.25 90)
+			(at 2.75 -5.25 90)
 			(layer "F.SilkS")
 			(uuid "68295864-3992-4497-91ef-8017b0edb3ac")
 			(effects
@@ -9027,6 +9027,14 @@
 		(uuid "025100e7-d748-4f1c-8462-d69f1cdd3526")
 	)
 	(segment
+		(start 175.677 137.332769)
+		(end 177.2 137.332769)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "27d84307-5e18-464a-a38d-78ca199785ba")
+	)
+	(segment
 		(start 160.8625 129.0125)
 		(end 158.5 126.65)
 		(width 0.25)
@@ -9081,14 +9089,6 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "cc9df07d-9e2a-4948-9575-8d1c3630451a")
-	)
-	(segment
-		(start 175.677 135.9)
-		(end 175.677 137.332769)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "GND")
-		(uuid "dacc70c7-0d84-4088-93b1-7d29c37816fb")
 	)
 	(segment
 		(start 156 114.8)
@@ -9210,6 +9210,14 @@
 		(uuid "42999537-6093-4907-9d25-e6d99c1e8f65")
 	)
 	(via
+		(at 177.2 137.332769)
+		(size 0.8)
+		(drill 0.4)
+		(layers "F.Cu" "B.Cu")
+		(net "GND")
+		(uuid "448357a2-3cc5-4dd4-bfe6-e904491dee76")
+	)
+	(via
 		(at 133.85 126.65)
 		(size 0.8)
 		(drill 0.4)
@@ -9292,24 +9300,6 @@
 		(filling no)
 		(net "GND")
 		(uuid "72453ad6-ed04-49fd-9ceb-75f955423d3f")
-	)
-	(via
-		(at 175.677 135.9)
-		(size 0.8)
-		(drill 0.4)
-		(layers "F.Cu" "B.Cu")
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(net "GND")
-		(uuid "8b63bd2e-6e33-4ba9-97a7-de5c76e68ef5")
 	)
 	(via
 		(at 126.25 123.25)
