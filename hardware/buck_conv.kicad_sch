@@ -2477,7 +2477,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100uF"
+		(property "Value" "180uF"
 			(at 55.88 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
