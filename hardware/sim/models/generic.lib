@@ -1,0 +1,33 @@
+* Generic models for the Slice_BUCK P-FET stage proposal.
+* None of these is a vendor model. Diodes Inc. refused the product-page fetch
+* (HTTP 403, https://www.diodes.com/part/view/DMP6023LE), so the P-FET is fitted
+* by hand to datasheet DS37199 Rev.3-2 figures; the rest are recalled
+* textbook/PSpice-eval parameter sets.
+
+* DMP6023LE, -60 V P-channel, SOT-223. Fitted to: VGS(th) -1..-3 V (use -2),
+* RDS(on) 28 mOhm max @ -10 V, 35 mOhm @ -4.5 V, Ciss 2569 pF, Crss 143 pF,
+* Coss 179 pF @ -30 V, Rg 8 Ohm, body diode Vsd -0.7 V @ 1 A.
+* Not covered: temperature (RDS(on) rise ~1.4x hot is applied by hand in the
+* loss table), avalanche, exact Qg curve shape, body-diode recovery.
+.model DMP6023 VDMOS(pchan Vto=-2.0 Kp=20 Rd=12m Rs=8m Rg=8 Lambda=0.01
++ Cgs=2.3n Cgdmax=1.2n Cgdmin=60p A=0.5
++ Cjo=0.8n M=0.5 Vj=0.8 Is=1e-12 N=1.0 Rb=20m mtriode=1)
+
+* 2N7002 class N-FET level shifter (SOT-23). Generic: Vth ~1.8 V, Rds ~2 Ohm,
+* Ciss ~40 pF.
+.model N7002 VDMOS(Vto=1.8 Kp=0.5 Rd=1.0 Rs=0.5 Rg=5 Cgs=35p Cgdmax=20p
++ Cgdmin=4p A=0.5 Cjo=15p Is=1e-14 Rb=0.5)
+
+* MMBT4401 / MMBT4403 totem pair: PSpice eval.lib 2N4401 / 2N4403 sets (recalled).
+.model Q4401 NPN(Is=26.03f Xti=3 Eg=1.11 Vaf=90.7 Bf=4.292K Ne=1.244 Ise=26.03f
++ Ikf=.2061 Xtb=1.5 Br=1.01 Nc=2 Isc=0 Ikr=0 Rc=.5 Cjc=11.01p Mjc=.3763
++ Vjc=.75 Fc=.5 Cje=24.07p Mje=.3641 Vje=.75 Tr=233.7n Tf=466.5p Itf=0
++ Vtf=0 Xtf=0 Rb=10)
+.model Q4403 PNP(Is=650.6E-18 Xti=3 Eg=1.11 Vaf=115.7 Bf=216.2 Ne=1.829
++ Ise=58.72f Ikf=1.079 Xtb=1.5 Br=3.578 Nc=2 Isc=0 Ikr=0 Rc=.715 Cjc=14.76p
++ Mjc=.5383 Vjc=.75 Fc=.5 Cje=19.82p Mje=.3357 Vje=.75 Tr=111.6n Tf=603.7p
++ Itf=.65 Vtf=5 Xtf=1.7 Rb=10)
+
+* SB560-class 5 A / 60 V Schottky (DO-201AD). Generic fit: Vf ~0.5 V @ 3 A,
+* Cj ~300 pF @ 4 V. Not covered: temperature, reverse leakage vs temperature.
+.model SB560 D(Is=2e-5 N=1.15 Rs=25m Cjo=600p M=0.5 Vj=0.5 Bv=60 Ibv=1m)
