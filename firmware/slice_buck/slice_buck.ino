@@ -46,6 +46,37 @@ const unsigned long PRINT_MS = 1000;
 unsigned long t_lastCtrl  = 0;
 unsigned long t_lastPrint = 0;
 
+// STATUS is built in RAM at most one float field per loop pass (a float
+// print takes up to 0.6 ms here) and sent at most 16 bytes per pass,
+// never more than Serial.availableForWrite(), so the 1 ms control step
+// never waits on the 64-byte TX buffer. 16 bytes a pass outruns the
+// 11.5 bytes/ms of 115200 baud. The longest line is 142 bytes (SETTOP
+// 2147483647 under SETV).
+struct LineBuf : public Print {
+  char b[160];
+  uint8_t len = 0, sent = 0;
+  size_t write(uint8_t c) override {
+    if (len >= sizeof b) return 0;
+    b[len++] = c;
+    return 1;
+  }
+} statusOut;
+const uint8_t STATUS_CHUNK = 16;
+uint8_t statusPart = 0;    // next part of the line to format, 0 = none
+bool statusWanted = false;
+int statusRaw;
+
+bool statusBusy() { return statusPart || statusOut.sent < statusOut.len; }
+
+void drainStatus() {
+  int n = min(Serial.availableForWrite(), statusOut.len - statusOut.sent);
+  n = min(n, STATUS_CHUNK);
+  if (n > 0) {
+    Serial.write((const uint8_t *)statusOut.b + statusOut.sent, n);
+    statusOut.sent += n;
+  }
+}
+
 //---------------- PWM ----------------
 void pwmInit() {
   digitalWrite(PIN_PWM, LOW);
@@ -64,7 +95,7 @@ void applyDuty(int d) {
     duty = 0;
     TCCR1A &= ~_BV(COM1A1);
     digitalWrite(PIN_PWM, LOW);
-  } else if (d >= PWM_FULL_MIN) {
+  } else if (d >= (int)PWM_FULL_MIN) {
     duty = PWM_TOP;
     TCCR1A &= ~_BV(COM1A1);
     digitalWrite(PIN_PWM, HIGH);
@@ -93,6 +124,10 @@ void shutdownOutput(const __FlashStringHelper *why, float v) {
   regulate = false;
   integ = 0.0f;
   applyDuty(0);
+  // output is off: finish any STATUS line so ERR starts a line of its own
+  while (statusPart) formatStatusPart();
+  Serial.write((const uint8_t *)statusOut.b + statusOut.sent, statusOut.len - statusOut.sent);
+  statusOut.sent = statusOut.len;
   Serial.print(F("ERR: "));
   Serial.print(why);
   Serial.print(F(" vout:"));
@@ -130,38 +165,53 @@ void controlStep() {
   applyDuty((int)constrain(u, 0.0f, (float)PWM_TOP));
 }
 
-void printStatus() {
-  int   raw   = analogRead(PIN_FB);
-  float v_fb  = adcToVolts(raw);
-  float v_out = estimateVout(v_fb);
-
-  Serial.print(F("STATUS | run:"));
-  Serial.print(enabled ? "1" : "0");
-  Serial.print(F(" mode:"));
-  Serial.print(regulate ? F("SETV") : F("SET"));
-  Serial.print(F(" duty:"));
-  Serial.print(duty);
-  Serial.print(F("/"));
-  Serial.print(PWM_TOP);
-  Serial.print(F(" raw:"));
-  Serial.print(raw);
-  Serial.print(F(" v_fb:"));
-  Serial.print(v_fb, 3);
-  Serial.print(F("V r_top:"));
-  Serial.print(R_TOP_OHM, 0);
-  Serial.print(F(" r_bot:"));
-  Serial.print(R_BOT_OHM, 0);
-  Serial.print(F(" est_vout:"));
-  Serial.print(v_out, 3);
-  Serial.print(F("V"));
-  if (regulate) {
-    Serial.print(F(" target:"));
-    Serial.print(v_target, 2);
-    Serial.print(F("V ramp:"));
-    Serial.print(v_ramp, 2);
-    Serial.print(F("V"));
+// Format the next part of the STATUS line, at most one float field;
+// statusPart returns to 0 when the line is complete.
+void formatStatusPart() {
+  switch (statusPart++) {
+    case 1:
+      statusRaw = analogRead(PIN_FB);
+      statusOut.len = statusOut.sent = 0;
+      statusOut.print(F("STATUS | run:"));
+      statusOut.print(enabled ? "1" : "0");
+      statusOut.print(F(" mode:"));
+      statusOut.print(regulate ? F("SETV") : F("SET"));
+      statusOut.print(F(" duty:"));
+      statusOut.print(duty);
+      statusOut.print(F("/"));
+      statusOut.print(PWM_TOP);
+      statusOut.print(F(" raw:"));
+      statusOut.print(statusRaw);
+      break;
+    case 2:
+      statusOut.print(F(" v_fb:"));
+      statusOut.print(adcToVolts(statusRaw), 3);
+      break;
+    case 3:
+      statusOut.print(F("V r_top:"));
+      statusOut.print(R_TOP_OHM, 0);
+      break;
+    case 4:
+      statusOut.print(F(" r_bot:"));
+      statusOut.print(R_BOT_OHM, 0);
+      break;
+    case 5:
+      statusOut.print(F(" est_vout:"));
+      statusOut.print(estimateVout(adcToVolts(statusRaw)), 3);
+      statusOut.print(F("V"));
+      if (!regulate) { statusOut.println(); statusPart = 0; }
+      break;
+    case 6:
+      statusOut.print(F(" target:"));
+      statusOut.print(v_target, 2);
+      break;
+    default:
+      statusOut.print(F("V ramp:"));
+      statusOut.print(v_ramp, 2);
+      statusOut.println(F("V"));
+      statusPart = 0;
+      break;
   }
-  Serial.println();
 }
 
 const char HELP[] = "CMDS: ON | OFF | SET <0-255> | SETV <0-12 V> | SETTOP <ohm> | STATUS";
@@ -215,7 +265,7 @@ void handleLine(String s) {
     return;
   }
   if (s.equalsIgnoreCase("STATUS")) {
-    printStatus();
+    statusWanted = true;
     return;
   }
 
@@ -244,7 +294,11 @@ void setup() {
 }
 
 void loop() {
-  pollSerial();
+  // commands wait until STATUS is out and the TX buffer is empty, so a
+  // reply never lands inside a STATUS line, and one of up to 63 bytes
+  // never waits for room
+  if (!statusBusy() && Serial.availableForWrite() == SERIAL_TX_BUFFER_SIZE - 1)
+    pollSerial();
 
   unsigned long now = millis();
   if (now - t_lastCtrl >= CTRL_MS) {
@@ -253,6 +307,12 @@ void loop() {
   }
   if (now - t_lastPrint >= PRINT_MS) {
     t_lastPrint = now;
-    printStatus();
+    statusWanted = true;
   }
+  if (statusWanted && !statusBusy()) {
+    statusWanted = false;
+    statusPart = 1;
+  }
+  if (statusPart) formatStatusPart();
+  drainStatus();
 }
