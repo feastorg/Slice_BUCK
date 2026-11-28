@@ -4,7 +4,7 @@ id: slice-buck
 name: Buck Converter / Analog Signal Generator
 summary: Programmable buck converter slice for variable DC output voltage.
 category: power
-status: concept
+status: development
 hardware:
   hw_gen_current: 3
   interface: SI1
